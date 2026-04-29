@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
 import NotFound from "./Pages/NotFound"
 
@@ -7,8 +7,7 @@ const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/404" element={<NotFound />}/>
-        <Route path="*" element={<Navigate to={"/404"} />}/>
+        <Route path="*" element={<NotFound />}/>
       </Routes>
     </div>
   )
